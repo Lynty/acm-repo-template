@@ -12,3 +12,10 @@ patches:
     - op: replace
       path: /metadata/name
       value: team-a
+- target:
+    kind: Namespace
+    name: default1
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: master-ns
