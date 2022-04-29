@@ -1,6 +1,6 @@
 namespace: team-a
 
-resources:
+bases:
 - ../base
 - ../../all-clusters
 
