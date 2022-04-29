@@ -1,0 +1,3 @@
+resources:
+- ../all-clusters
+- namespace.yaml
