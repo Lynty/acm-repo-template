@@ -2,6 +2,7 @@ namespace: team-a
 
 resources:
 - ../base
+- ../../all-clusters
 
 patches:
 - target:
