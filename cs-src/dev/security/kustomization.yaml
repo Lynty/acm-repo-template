@@ -1,0 +1,5 @@
+namespace: security
+
+resources:
+- constraint-templates
+- constraints
