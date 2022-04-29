@@ -2,6 +2,7 @@ namespace: team-a
 
 resources:
 - ../base
+namePrefix: team-a-
 
 patches:
 - target:
