@@ -3,7 +3,6 @@ kind: ConstraintTemplate
 metadata:
   name: k8spspprivilegedcontainer
   annotations:
-    configmanagement.gke.io/cluster-selector: selector-letter-a
     description: Controls running of privileged containers.
 spec:
   crd:

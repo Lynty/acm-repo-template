@@ -3,7 +3,6 @@ kind: K8sPSPPrivilegedContainer
 metadata:
   name: psp-privileged-container
   annotations:
-    configmanagement.gke.io/cluster-selector: selector-letter-a
     description: "Restricts containers with `securityContext.privileged` set to `true`."
 spec:
   enforcementAction: deny
