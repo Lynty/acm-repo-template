@@ -1,0 +1,15 @@
+namespace: team-b
+
+resources:
+- ../base
+
+namePrefix: team-b-
+
+patches:
+- target:
+    kind: Namespace
+    name: default
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: team-b

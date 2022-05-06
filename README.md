@@ -1,6 +1,6 @@
 # Configuring namespace specific policies
 
-With this SADA opinionated ACM repository, we can configure multi-envirnment, multi-cluster, and multi-tenancy. For multi-tenancy, the namespaces used by different teams should have different policies according to the best practices for multi-tenancy.
+With this SADA opinionated ACM repository, we can configure multi-environment, multi-cluster, and multi-tenancy. For multi-tenancy, the namespaces used by different teams should have different policies according to the best practices for multi-tenancy.
 
 - **[automated rendering](automated-rendering/README.md)**:
   Config Sync supports rendering Kustomize configurations in version 1.9.0 or later.
