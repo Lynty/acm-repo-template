@@ -16,7 +16,9 @@ The folder directory:
 .
 ├── cs
 │   └── dev
-│       └── cluster-1-dev
+│       ├── cluster-1-dev
+│       │   └── dev -> ../../../cs-src/dev
+│       └── cluster-2-dev
 │           └── dev -> ../../../cs-src/dev
 └── cs-src
     └── dev
@@ -24,6 +26,9 @@ The folder directory:
         ├── cluster-1-dev
         │   ├── base
         │   └── team-a
+        ├── cluster-2-dev
+        │   ├── base
+        │   └── team-b
         └── security
             ├── constraint-templates
             └── constraints
