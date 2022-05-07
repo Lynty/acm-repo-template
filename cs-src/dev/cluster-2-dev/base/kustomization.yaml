@@ -1,3 +1,4 @@
 resources:
   - ../../all-clusters
   - role.yaml
+  - namespace.yaml
