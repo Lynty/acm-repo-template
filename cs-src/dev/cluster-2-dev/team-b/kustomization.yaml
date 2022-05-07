@@ -2,6 +2,7 @@ namespace: team-b
 
 resources:
 - ../base
+- ../../all-clusters/team-b
 
 namePrefix: team-b-
 

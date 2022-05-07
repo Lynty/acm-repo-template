@@ -1,5 +1,17 @@
 nameSuffix: -dev
 
+resources:
+  - pod.yaml
+
+  #patches:
+  #- target:
+  #    kind: Namespace
+  #    name: team-b
+  #  patch: |-
+  #    - op: replace
+  #      path: /metadata/name
+  #      value: team-a
+ 
 #helmCharts:
 #- name: cert-manager
 #  repo: https://charts.jetstack.io

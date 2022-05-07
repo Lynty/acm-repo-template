@@ -2,8 +2,15 @@ namespace: team-a
 
 resources:
 - ../base
+- ../../all-clusters/team-a
 
 namePrefix: team-a-
+
+helmCharts:
+- name: haproxy
+  repo: https://emagtechlabs.github.io/helm-charts/
+  version: v1.4.0
+  releaseName: my-haproxy
 
 patches:
 - target:
