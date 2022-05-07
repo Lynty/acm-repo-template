@@ -1,4 +1,4 @@
 resources:
 - dev/cluster-1-dev/team-a
 - dev/cluster-1-dev/team-b
-#- dev/security
+- dev/security
