@@ -14,22 +14,47 @@ The directory `configsync-src` contains the configuration in Kustomize format. E
 The folder directory: 
 ```
 .
+├── README.md
 ├── cs
 │   └── dev
 │       ├── cluster-1-dev
-│       │   └── dev -> ../../../cs-src/dev
+│       │   ├── dev -> ../../../cs-src/dev
+│       │   └── kustomization.yaml
 │       └── cluster-2-dev
-│           └── dev -> ../../../cs-src/dev
+│           ├── dev -> ../../../cs-src/dev
+│           └── kustomization.yaml
 └── cs-src
     └── dev
         ├── all-clusters
+        │   ├── kustomization.yaml # updates to all clusters
+        │   ├── pod.yaml
+        │   ├── team-a
+        │   │   └── kustomization.yaml # updates to all team-a namespaces
+        │   └── team-b
+        │       ├── kustomization.yaml # updates to all team-b namespaces
+        │       └── nginx_web_deployment.yaml
         ├── cluster-1-dev
         │   ├── base
-        │   └── team-a
+        │   │   ├── kustomization.yaml # updates to all namespaces in cluster-1-dev
+        │   │   ├── namespace.yaml
+        │   │   └── role.yaml
+        │   ├── team-a
+        │   │   └── kustomization.yaml # updates to team-a namespace in cluster-1-dev
+        │   └── team-b
+        │       └── kustomization.yaml # updates to team-b namespace in cluster-1-dev
         ├── cluster-2-dev
         │   ├── base
+        │   │   ├── kustomization.yaml # updates to all namespaces in cluster-2-dev
+        │   │   ├── namespace.yaml
+        │   │   └── role.yaml
         │   └── team-b
+        │       └── kustomization.yaml # updates to team-b namespace in cluster-2-dev
         └── security
             ├── constraint-templates
-            └── constraints
+            │   ├── k8srestrictnamespaces.yaml
+            │   └── kustomization.yaml
+            ├── constraints
+            │   ├── K8sRestrictNamespaces.yaml
+            │   └── kustomization.yaml
+            └── kustomization.yaml
 ```
