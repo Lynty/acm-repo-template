@@ -1,3 +1,2 @@
-namespace: security
 resources:
 - K8sRestrictNamespaces.yaml

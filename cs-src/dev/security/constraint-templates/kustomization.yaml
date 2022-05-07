@@ -1,3 +1,2 @@
-namespace: security
 resources:
 - k8srestrictnamespaces.yaml
