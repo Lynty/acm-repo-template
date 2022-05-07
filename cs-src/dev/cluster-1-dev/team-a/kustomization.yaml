@@ -7,10 +7,10 @@ resources:
 namePrefix: team-a-
 
 helmCharts:
-- name: haproxy
-  repo: https://emagtechlabs.github.io/helm-charts/
-  version: v1.4.0
-  releaseName: my-haproxy
+- name: prometheus
+  repo: https://prometheus-community.github.io/helm-charts
+  version: v15.8.5
+  releaseName: my-prometheus
 
 patches:
 - target:
