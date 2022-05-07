@@ -3,6 +3,12 @@ kind: K8sRestrictNamespaces
 metadata:
   name: restrict-default-ns
 spec:
+  match:
+      kinds:
+        - apiGroups:
+            - ''
+          kinds:
+            - Pod
   enforcementAction: deny
   parameters:
     restrictedNamespaces:
