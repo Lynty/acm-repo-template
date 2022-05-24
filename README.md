@@ -1,15 +1,15 @@
-# Configuring namespace specific policies
+Repository structure template for Anthos clusters using Anthos Config Management (ACM) Config Sync.
 
-With this SADA opinionated ACM repository, we can configure multi-environment, multi-cluster, and multi-tenancy. For multi-tenancy, the namespaces used by different teams should have different policies according to the best practices for multi-tenancy.
+# Overview
 
-- **[automated rendering](automated-rendering/README.md)**:
-  Config Sync supports rendering Kustomize configurations in version 1.9.0 or later.
-  You can check in the Kustomize configurations to your Git repository,
-  and Config Sync will render and sync them to your clusters.
+With this opinionated ACM repository, we can deploy Kubernetes resources even with complexities around multi-environment, multi-cluster, and multi-tenant requirements in a way that is DRY, scalable, and centralized.
 
-## Source Kustomize configurations
+- Config Sync supports rendering Kustomize configurations in version 1.9.0 or later. You can check in the Kustomize configurations to your Git repository, and Config Sync will render and sync them to your clusters.
+- Supports deployment of Helm charts
 
-The directory `configsync-src` contains the configuration in Kustomize format. Each cluster uses `./cs/<ENV>/<CLUSTER_NAME>` as its Config Sync policy directory.
+## Repository Structure
+
+The directory `cs-src` contains the configuration in Kustomize format. Each cluster uses `./cs/<ENV>/<CLUSTER_NAME>` as its Config Sync policy directory.
 
 The folder directory: 
 ```
@@ -58,3 +58,16 @@ The folder directory:
             │   └── kustomization.yaml
             └── kustomization.yaml
 ```
+
+# Examples
+
+## Helm Chart Deployment
+
+## ACM Policy Controller
+
+# Local Testing
+
+1. Change into the directory the cluster will use as its Config Sync Policy directory
+  - `cd cs/dev/cluster-1-dev/`
+2. Build the KRM resources using the 'kustomization.yaml' file
+  - `kustomize build --enable-helm`
