@@ -7,6 +7,12 @@ With this opinionated ACM repository, we can deploy Kubernetes resources even wi
 - Config Sync supports rendering Kustomize configurations in version 1.9.0 or later. You can check in the Kustomize configurations to your Git repository, and Config Sync will render and sync them to your clusters.
 - Supports deployment of Helm charts
 
+The ideal users of this template:
+- platform / operation teams
+- large enterprises that run multi Kubernetes clusters across hybrid and multi-cloud environments
+- security teams that want to implement security guardrails across multiple clusters that have different requirements (ex: data residency controls in clusters running in europe)
+- anyone that wants to deploy to Kubernetes using the declarative paradigm and wants to use native Kubernetes manifest files
+
 ## Repository Structure
 
 The directory `cs-src` contains the configuration in Kustomize format. Each cluster uses `./cs/<ENV>/<CLUSTER_NAME>` as its Config Sync policy directory.
@@ -69,5 +75,5 @@ The folder directory:
 
 1. Change into the directory the cluster will use as its Config Sync Policy directory
   - `cd cs/dev/cluster-1-dev/`
-2. Build the KRM resources using the 'kustomization.yaml' file
+2. Build the KRM resources using the `kustomization.yaml` file
   - `kustomize build --enable-helm`
